@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduLearn - Course</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+
+  <script>
+  var ctx = document.getElementById('progressChart').getContext('2d');
+  var progressChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Math', 'Science', 'History', 'Literature'],
+      datasets: [{
+        label: 'Completion Rate',
+        data: [85, 90, 78, 88],
+        backgroundColor: 'rgba(52, 152, 219, 0.6)',
+        borderColor: 'rgba(52, 152, 219, 1)',
+        borderWidth: 1
+      }]
+    }
+  });
+</script>
+
+</head>
+<body>
+<!-- dashboard.html -->
+<div class="container my-5">
+  <h2 class="mb-4">📊 Your Learning Dashboard</h2>
+  <div class="progress mb-4" style="height: 25px;">
+    <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 65%;">
+      65% Complete
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      HTML & CSS Basics
+      <span class="badge bg-success">Completed</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      JavaScript Intermediate
+      <span class="badge bg-warning text-dark">In Progress</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Backend with Node.js
+      <span class="badge bg-secondary">Not Started</span>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
